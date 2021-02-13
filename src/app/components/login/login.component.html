@@ -1,0 +1,58 @@
+
+<div style="top: 100px;position: relative;">
+    <!-- Heading -->
+<div class="row text-center">
+    <div class="container">
+        <h2 class="section-heading">Connexion</h2>
+        <h5 class="section-subheading text-muted">Entrer vos informations de connexion du Marsupilami</h5>
+    </div>
+</div>
+<!-- Heading -->
+
+<!-- Main Section -->
+<section id="contact">
+    <!-- Start of Container -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+                    <div class="row">
+                        <div class="col-md-6" style="margin: auto;">
+                            <!-- Username Input -->
+                            <div class="form-group">
+                                <label>Mon utilisateur:</label>
+                                <input class="form-control" #username="ngModel" type="text" name="username" placeholder="Mon utilisateur *" ngModel>
+                            </div>
+                            <!-- Password Input -->
+                            <div class="form-group">
+                                <label>Mot de passe:</label>
+                                <input class="form-control" type="password" name="password" placeholder="Mot de passe *" ngModel>
+                            </div>
+						</div>
+					</div>
+					<div class="row">	
+						<div class="col-lg-6" style="margin: auto;">
+                            <div>
+                                <button type="submit" class="btn btn-success mr-2">Se connecter</button>
+                                <a routerLink="/register" routerLinkActive="active">
+                                    <button type="button" class="btn btn-info">S'inscrirer</button>
+                                </a>
+							</div>
+						</div>	
+                    </div>
+                    <div class="row">	
+						<div class="col-lg-6" style="margin: auto;top: 20px;">
+                            <span class="text-danger">
+                                {{message}}
+                            </span>
+						</div>	
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <!-- End of Container -->
+</section>
+<!-- Main Section /-->
+</div>
